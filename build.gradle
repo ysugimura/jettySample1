@@ -1,0 +1,36 @@
+apply plugin: 'java'  
+apply plugin: 'eclipse'
+
+repositories {
+  jcenter()
+}
+
+sourceSets {
+  main {
+    java { 
+      srcDir 'src_host'
+      srcDir 'src_webapp'
+    }
+    resources { 
+      srcDir 'src_host'
+      srcDir 'src_webapp'
+    }
+  }
+}
+
+dependencies {
+  compile 'org.eclipse.jetty:jetty-webapp:9.4.8.v20171121'
+}
+
+eclipse {
+  classpath {
+    file {
+      whenMerged {cp->
+        removeDuplicatedSources(cp)
+        removeOutputFoldersForSourceFolders(cp)
+        removeAllExcludes(cp)
+        addOtherProjects(cp)
+      }
+    }
+  }
+}
