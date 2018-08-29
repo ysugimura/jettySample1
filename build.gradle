@@ -9,11 +9,13 @@ sourceSets {
   main {
     java { 
       srcDir 'src_host'
-      srcDir 'src_webapp'
+      srcDir 'src_wara'
+      srcDir 'src_warb'
     }
     resources { 
       srcDir 'src_host'
-      srcDir 'src_webapp'
+      srcDir 'src_wara'
+      srcDir 'src_warb'
     }
   }
 }
@@ -29,7 +31,8 @@ eclipse {
         cp.entries.each{
           if (it.kind != 'src') return;
           if (it.path == 'src_host') it.output = 'bin'
-          if (it.path == 'src_webapp') it.output = 'war/WEB-INF/classes'
+          if (it.path == 'src_wara') it.output = 'wara/WEB-INF/classes'
+          if (it.path == 'src_warb') it.output = 'warb/WEB-INF/classes'
         }
       }
     }

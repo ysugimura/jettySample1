@@ -1,6 +1,6 @@
 package com.cm55.jettySample1.container;
 
-import com.cm55.jettySample1.webapp.*;
+import com.cm55.jettySample1.wara.*;
 
 public class ContainerSide {
 
