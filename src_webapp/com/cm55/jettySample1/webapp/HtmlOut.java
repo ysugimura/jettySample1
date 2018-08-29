@@ -1,4 +1,4 @@
-package com.cm55.jettySample1.server;
+package com.cm55.jettySample1.webapp;
 
 import java.io.*;
 

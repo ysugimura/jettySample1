@@ -1,4 +1,4 @@
-package com.cm55.jettySample1;
+package com.cm55.jettySample1.container;
 
 
 import java.io.*;
@@ -11,7 +11,7 @@ public class Main {
 
   public static void main(String[]args) throws Exception {
     
-    HostSide.setSharedValue(123);
+    ContainerSide.setSharedValue(123);
     
     Server server = new Server(8080);    
     WebAppContext war = new WebAppContext();
