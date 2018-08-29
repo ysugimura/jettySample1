@@ -26,10 +26,11 @@ eclipse {
   classpath {
     file {
       whenMerged {cp->
-        removeDuplicatedSources(cp)
-        removeOutputFoldersForSourceFolders(cp)
-        removeAllExcludes(cp)
-        addOtherProjects(cp)
+        cp.entries.each{
+          if (it.kind != 'src') return;
+          if (it.path == 'src_host') it.output = 'bin'
+          if (it.path == 'src_webapp') it.output = 'war/WEB-INF/classes'
+        }
       }
     }
   }
