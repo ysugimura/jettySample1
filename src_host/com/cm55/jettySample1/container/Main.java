@@ -10,6 +10,7 @@ import org.eclipse.jetty.webapp.*;
 public class Main {
 
   public static void main(String[]args) throws Exception {
+    CLCheck.check("Main", Main.class);
     
     ContainerSide.setSharedValue(123);
     

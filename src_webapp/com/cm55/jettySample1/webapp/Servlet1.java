@@ -10,6 +10,7 @@ public class Servlet1 extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse r) throws IOException {
+    CLCheck.check("Servlet1", getClass());
     HtmlOut.output(r, 
       "<html><body>shared value = " + ContainerSide.getSharedValue() + "</body></html>"
     );
