@@ -11,8 +11,7 @@ public class Servlet3 extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse r) throws IOException {
     CLCheck.check("Servlet3", getClass());
     HtmlOut.output(r, 
-        "<html><body>servlet3</body></html>"
-      );
-  }
-  
+      "<html><body>servlet3</body></html>"
+    );
+  }  
 }

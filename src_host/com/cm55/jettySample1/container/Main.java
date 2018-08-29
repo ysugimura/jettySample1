@@ -1,11 +1,8 @@
 package com.cm55.jettySample1.container;
 
 
-import java.io.*;
-
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.server.handler.*;
-import org.eclipse.jetty.util.resource.*;
 import org.eclipse.jetty.webapp.*;
 
 public class Main {

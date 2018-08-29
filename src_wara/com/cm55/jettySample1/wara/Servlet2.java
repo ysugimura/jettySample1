@@ -12,8 +12,7 @@ public class Servlet2 extends HttpServlet {
     CLCheck.check("Servlet2", getClass());
     WebappSide.setWebappMessage("hello world");
     HtmlOut.output(r, 
-        "<html><body>" + ContainerSide.getWebappMessage() + "</body></html>"
-      );
-  }
-  
+      "<html><body>message = " + ContainerSide.getWebappMessage() + "</body></html>"
+    );
+  }  
 }
