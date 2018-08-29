@@ -4,11 +4,13 @@ import java.io.*;
 
 import javax.servlet.http.*;
 
+import com.cm55.jettySample1.*;
+
 public class Servlet2 extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse r) throws IOException {
     HtmlOut.output(r, 
-        "<html><body>test2</body></html>"
+        "<html><body>" + HostSide.getServerMessage() + "</body></html>"
       );
   }
   
